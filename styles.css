@@ -1,0 +1,329 @@
+/* styles.css */
+
+    #connections {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: auto;
+        z-index: 0;
+    }
+
+    #connections path {
+        pointer-events: none;
+        cursor: pointer;
+    }
+
+    #connections .hover-path {
+        pointer-events: stroke;
+    }
+
+    #centerTitle {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        text-align: center;
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 0.4s ease;
+    }
+
+    #centerTitle.hidden {
+        opacity: 0;
+    }
+
+    .title-main {
+        font-size: 50px;
+        font-family: "Cinzel", serif;
+        font-weight: 550;
+        letter-spacing: 3px;
+        color: rgba(0, 0, 0, 0.9);
+        text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.15),
+        0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .title-sub {
+        margin-top: 10px;
+        font-size: 22px;
+        font-style: italic;
+        color: rgba(0, 0, 0, 0.65);
+        letter-spacing: 2px;
+    }
+
+    /* Container to hold each image */
+    .image-container {
+        position: absolute;
+        /*
+        width: 200px;
+        height: 200px;
+        */
+        border-radius: 50%;
+        overflow: visible;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: z-index 0s;
+    }
+
+    #uiControls {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .image-container:hover {
+        z-index: 1000;
+    }
+
+    /* styling for clickable images */
+    .clickable-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    /* Effect on hover */
+    .image-container:hover .clickable-img {
+        filter: grayscale(100%); /* Apply grayscale only on hover */
+    }
+
+    /* The overall containing the icons for left and right interactions */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0;
+        transition: 0.3s;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    /* Make overlay visible when hover over image */
+    .image-container:hover .overlay {
+        opacity: 1;
+    }
+
+    /* Styling for icons */
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: auto;
+        z-index: 1;
+        cursor: pointer;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .deceased-icon {
+        position: absolute;
+        /*transform: translateX(-50%);*/
+        width: 40px;
+        height: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .image-container:hover .icon {
+        opacity: 1;
+    }
+
+    .image-container:hover .deceased-icon {
+        opacity: 1;
+    }
+
+    .left { 
+        left: 25%;
+    }
+    .right { 
+        left: 75%;
+    }
+
+    /* Hover effect on icons: slightly enlarge */
+    .icon:hover {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    /* Hoverable left and right areas */
+    .hover-left, .hover-right {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .hover-left { left: 0;}
+    .hover-right { right: 0;}
+
+    .hover-left:hover,
+    .hover-right:hover {
+        background: rgba(0,0,0,0.3);
+        opacity: 1;
+    }
+
+    .image-label {
+        /*outline: 2px solid rgba(0,0,0,0.7);*/
+        opacity: 1;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 10px);
+        margin-top: 10px;
+        z-index: 10000;
+
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        pointer-events: none;
+
+        background: rgba(0,0,0,0.7);
+        padding: 4px 10px;
+        border-radius: 12px;
+        white-space: nowrap;
+    }
+
+    .image-container:hover .image-label {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transition: all 0.3s ease;
+        max-width: 600px;
+    }
+
+    .popup-content p {
+        width: 100%;
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    .popup-content.expanded {
+        max-width: 600px;
+    }
+
+    #moreInfoText {
+        margin-top: 15px;
+        text-align: left;
+        line-height: 1.5;
+        max-height: 200px;
+        opacity: 0;
+        overflow-y: auto;
+        opacity: 0;
+        transition: all 0.35s ease;
+        padding-right: 10px;
+    }
+
+    #moreInfoText.show {
+        opacity: 1;
+    }
+
+    #popupImage {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+
+    /* Pop up background */
+    #box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0,0,0,0.5);
+        z-index: 9999;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Animation setup */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        transform: scale(0.8);
+    }
+
+    /* Active state (visible) */
+    #box.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    /* Inner popup */
+    #box > div {
+        background: white;
+        padding: 20px;
+        width: 300px;
+        border-radius: 8px;
+        text-align: center;
+
+        transform: scale(0.8) translateY(20px);
+        transition: transform 0.3s ease;
+    }
+
+    #box.active > div {
+        transform: scale(1) translateY(0);
+    }
+
+    #clearLinesBtn {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+
+    .dimmed {
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: all 0.3s ease;
+    }
+    
+    .highlight-glow {
+        filter: none;
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                    0 0 40px rgba(0, 150, 255, 0.6);
+        transition: all 0.3s ease;
+    }
+
+    /* TIP: Add 'outline: 2px solid red' in a thing to see/test things

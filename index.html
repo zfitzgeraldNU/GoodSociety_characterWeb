@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to CSS file-->
+     <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="centerTitle">
+        <div class="title-main">Good Society</div>
+        <div class="title-sub">Secrets Under Satin</div>
+    </div>
+
+    <!-- Show/Clear connections button-->
+     <!--
+     <button id ="toggleConnectionsBtn"
+        style = "position: fixed; top: 20px; right: 20px; z-index: 10;">
+        Show All Connections
+    </button>
+    -->
+
+    <!-- Search container -->
+     <!-- 
+     <div id = "searchContainer" style="display: flex;
+     flex-direction: column;
+     align-items: flex-end;">
+
+         Search box
+         <input id="searchBox" 
+         type="text" 
+         placeholder="Search"
+         style="padding: 6px 10px;
+         font-size: 14px;
+         margin-bottom: 10px;" />
+
+         Clear search button
+          <button id="clearSearchBtn"
+            style="padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;">
+            Clear Search 
+        </button>
+    </div>
+    -->
+
+    <div id ="uiControls">
+
+        <!-- Show/Clear connections button -->
+         <button id="toggleConnectionsBtn">
+            Show All Connections
+         </button>
+
+         <!-- Search container-->
+          <div id="searchContainer">
+
+            <!-- Search box-->
+             <input id="searchBox"
+             type="text"
+             placeholder="Search"/>
+
+             <!-- Clear search button -->
+              <button id="clearSearchBtn">
+                Clear Search
+              </button>
+          </div>
+    </div>
+
+    <!-- Pop up box -->
+    <div id ="box">
+        <div class="popup-content">
+            <h2 id="popupName"></h2>
+            <img id="popupImage" />
+
+            <p><strong>Peerage:</strong> <span id="popupPeerage"></span></p>
+            <p><strong>Spoken Address:</strong> <span id="popupAddress"></span></p>
+            <p><strong>Age:</strong> <span id="popupAge"></span></p>
+            <p><strong>Faceclaim:</strong> <span id="popupFace"></span></p>
+            <p><strong>Played By:</strong> <span id = "popupPlayedBy"></span></p>
+
+            <button id="moreInfoBtn">More Info</button>
+            <div id="moreInfoText"></div>
+        </div>
+    </div>
+
+<!-- SVG container for connections -->
+    <svg id="connections"
+        style="position:absolute; top:0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+    </svg>
+
+<!-- Link to JS files-->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
