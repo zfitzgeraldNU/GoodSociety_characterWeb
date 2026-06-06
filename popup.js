@@ -1,3 +1,6 @@
+import { characters } from "./characters.js";
+import { connections } from "./connections.js";
+
 // Show the pop up box with the passed text
 export function showBox(id) {
     const character = characters.find(c => c.id === id);

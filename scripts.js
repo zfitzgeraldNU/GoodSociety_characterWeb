@@ -8,7 +8,6 @@ let hoveredCharacter = false;
 
 // Define image and circle size
 const container = document.body;
-//const imageSize = 200; // must match .image-container width/height
 const baseSize = 200;
 const minSize = 85;
 const imageSize = Math.max(
@@ -16,8 +15,6 @@ const imageSize = Math.max(
     baseSize - (characters.length - 6) * 10
 );
 const minSpacing = imageSize * 1.4;
-//const radius = (characters.length * minSpacing) / (2 * Math.PI);
-//const radius = Math.min(window.innerWidth, window.innerHeight) / 3; // adjust to make circle bigger/smaller
 const centerX = window.innerWidth / 2;
 const centerY = window.innerHeight / 2;
 const maxRadius = Math.min(window.innerWidth, window.innerHeight) / 2 - imageSize;

@@ -211,8 +211,8 @@ export const characters = [
     },
 
     {
-        id: 'troy',
-        name: "Troy Boulton",
+        id: 'timothy',
+        name: "Timothy Belmont",
         image: "images/ZachEffron.png",
         peerage: "None",
         address: "Mr. Boulton",
