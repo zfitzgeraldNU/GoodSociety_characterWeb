@@ -1,0 +1,72 @@
+// Show the pop up box with the passed text
+function showBox(id) {
+    const character = characters.find(c => c.id === id);
+    const moreInfoBtn = document.getElementById("moreInfoBtn");
+
+    if (!character) return;
+
+    document.getElementById("popupName").innerText = character.name;
+    document.getElementById("popupImage").src = character.image;
+    document.getElementById("popupPeerage").innerText = character.peerage;
+    document.getElementById("popupAddress").innerText = character.address;
+    document.getElementById("popupAge").innerText = character.age;
+    document.getElementById("popupFace").innerText = character.faceclaim;
+    document.getElementById("popupPlayedBy").innerText = character.playedBy;
+
+    document.getElementById("moreInfoBtn").dataset.id = id;
+
+    if (character.hasInfo) {
+        moreInfoBtn.style.display = 'block';
+    } else {
+        moreInfoBtn.style.display = 'none';
+    }
+    
+    const textBox = document.getElementById("moreInfoText");
+    textBox.classList.remove("show");
+    textBox.innerText = "";
+
+    document.querySelector(".popup-content").classList.remove("expanded");
+
+    document.getElementById("box").classList.add("active");
+}
+
+// More info button
+document.getElementById("moreInfoBtn").onclick = async () => {
+    const currentId = document.getElementById("moreInfoBtn").dataset.id;
+    const textBox = document.getElementById("moreInfoText");
+
+    // Toggle behavior
+    if (textBox.classList.contains("show")) {
+        textBox.classList.remove("show");
+        textBox.innerText = "";
+        document.querySelector(".popup-content").classList.remove("expanded");
+        return
+    }
+
+    try {
+        const response = await fetch(`data/${currentId}.txt`);
+        const text = await response.text();
+
+        textBox.innerText = text;
+        textBox.classList.add("show");
+
+        document.querySelector(".popup-content").classList.add("expanded");
+
+    } catch (err) {
+        console.error(err);
+        textBox.innerText = "Could not load additional information.";
+        textBox.classList.add("show");
+    }
+};
+
+// Hide the pop up box
+function hideBox() {
+    document.getElementById("box").classList.remove("active");
+}
+
+// Allow clicking outside of pop up box to exit pop up box
+document.getElementById("box").addEventListener('click', (e) => {
+    if(e.target === document.getElementById("box")) {
+        hideBox();
+    }
+});
