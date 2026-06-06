@@ -1,5 +1,5 @@
 // Define connections
-const connections = [
+export const connections = [
 
     // Sort by character? Prioritize PCs
     { 
@@ -202,3 +202,11 @@ const connections = [
         subtype: 'Grievant/Respondent'
     },
 ];
+
+// Connections colors
+export const relationshipColors = {
+    'Platonic': 'rgb(63, 104, 206)',
+    'Familial': 'rgba(162, 201, 170, 1)',
+    'Romantic': 'rgba(255, 29, 141, 1)',
+    'Other':    'rgba(117, 117, 117, 1)'
+};

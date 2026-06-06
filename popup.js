@@ -1,5 +1,5 @@
 // Show the pop up box with the passed text
-function showBox(id) {
+export function showBox(id) {
     const character = characters.find(c => c.id === id);
     const moreInfoBtn = document.getElementById("moreInfoBtn");
 
@@ -60,7 +60,7 @@ document.getElementById("moreInfoBtn").onclick = async () => {
 };
 
 // Hide the pop up box
-function hideBox() {
+export function hideBox() {
     document.getElementById("box").classList.remove("active");
 }
 

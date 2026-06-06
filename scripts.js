@@ -1,18 +1,10 @@
 // scripts.js
 
 import { characters } from './characters.js';
-import { connections } from './connections.js';
-import { popup } from "./popup.js";
+import { connections, relationshipColors } from './connections.js';
+import { showBox, hideBox } from "./popup.js";
 
 let hoveredCharacter = false;
-
-// Connections colors
-const relationshipColors = {
-    'Platonic': 'rgb(63, 104, 206)',
-    'Familial': 'rgba(162, 201, 170, 1)',
-    'Romantic': 'rgba(255, 29, 141, 1)',
-    'Other':    'rgba(117, 117, 117, 1)'
-};
 
 // Define image and circle size
 const container = document.body;

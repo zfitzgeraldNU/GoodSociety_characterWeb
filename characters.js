@@ -1,6 +1,6 @@
 // Define characters and their associated information
 
-const characters = [
+export const characters = [
     {
         id: "elenor",
         name: "Elenor Huntley",
