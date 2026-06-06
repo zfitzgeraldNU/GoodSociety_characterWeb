@@ -940,15 +940,6 @@ document.getElementById('clearSearchBtn').addEventListener('click', function() {
     });
 });
 
-/*
-// Helper function to update the visibility of the buttons based on current line states
-function updateButtonVisibility() {
-    // Check if any line is visible
-    //const anyVisible = Array.from(document.querySelectorAll('#connections path'))
-    document.querySelectorAll('#connections .connection-line').some(path => path.dataset.visible === "true");
-}
-    */
-
 // Update button state
 function updateButton() {
     const anyVisible = Array.from(
