@@ -23,7 +23,7 @@ export const characters = [
         faceclaim: "Birkan Sokullu",
         deceased: true,
         hasInfo: false,
-        playedBy: "TBD"
+        playedBy: "None"
     },
 
     {
@@ -215,7 +215,7 @@ export const characters = [
         name: "Timothy Belmont",
         image: "images/ZachEffron.png",
         peerage: "None",
-        address: "Mr. Boulton",
+        address: "Mr. Belmont",
         age: "26",
         faceclaim: "Zac Effron",
         hasInfo: true,
@@ -267,7 +267,7 @@ export const characters = [
         age: "24",
         faceclaim: "Tanya Ravichandran",
         hasInfo: false,
-        playedBy: "TBD"
+        playedBy: "Kay"
     },
 
     {
