@@ -235,6 +235,19 @@ export const characters = [
     },
 
     {
+        id: "cecil",
+        name: "Cecil Whitmore",
+        image: "images/LouisGarrel.jpg",
+        peerage: "Duke",
+        address: "Lord Whitmore",
+        age: "39",
+        faceclaim: "Louis Garrel",
+        hasInfo: false,
+        playedBy: "Zach"
+
+    },
+
+    {
         id: "ben",
         name: "Benedict Huntington IV",
         image: "images/Jungkook.png",
