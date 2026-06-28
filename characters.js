@@ -48,7 +48,7 @@ export const characters = [
         age: "29",
         faceclaim: "Richard Madden",
         hasInfo: true,
-        playedBy: "TBD"
+        playedBy: "Kay"
     },
 
     {
@@ -85,7 +85,7 @@ export const characters = [
         age: "18",
         faceclaim: "Anya Taylor-Joy",
         hasInfo: true,
-        playedBy: "I forgot"
+        playedBy: "Nevi"
     },
 
     {
@@ -133,17 +133,17 @@ export const characters = [
         age: "27",
         faceclaim: "Toby-Alexander Smith",
         hasInfo: true,
-        playedBy: "Joel?"
+        playedBy: "Joel"
 
     },
 
     {
         id: "rosalind",
-        name: "Rosalind Hawthorne",
+        name: "Rosalind Lancaster",
         image: "images/LarissaOpitz.png",
-        peerage: "???",
-        address: "???",
-        age: "???",
+        peerage: "Baroness",
+        address: "Lady Lancaster",
+        age: "25",
         faceclaim: "Larissa Opitz",
         hasInfo: false,
         playedBy: "Kay"
@@ -242,9 +242,8 @@ export const characters = [
         address: "Lord Whitmore",
         age: "39",
         faceclaim: "Louis Garrel",
-        hasInfo: false,
+        hasInfo: true,
         playedBy: "Zach"
-
     },
 
     {
@@ -268,7 +267,7 @@ export const characters = [
         age: 24,
         faceclaim: "Essie Davis",
         hasInfo: true,
-        playedBy: "TBD"
+        playedBy: "Joel"
     },
 
     {
