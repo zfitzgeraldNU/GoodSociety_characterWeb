@@ -55,11 +55,11 @@ export const characters = [
         id: "lucius",
         name: "Lucius Hilgrove",
         image: "images/SebastianAmoruso.png",
-        peerage: "???",
-        address: "???",
-        age: "???",
+        peerage: "Count",
+        address: "Count Hilgrove",
+        age: "24",
         faceclaim: "Sebastian Amoruso",
-        hasInfo: false,
+        hasInfo: true,
         playedBy: "Nevi"
     },
 
@@ -72,7 +72,7 @@ export const characters = [
         age: "60",
         faceclaim: "Lucy Lawless",
         hasInfo: true,
-        playedBy: "TBD"
+        playedBy: "Nevi"
 
     },
 
