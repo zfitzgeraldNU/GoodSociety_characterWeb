@@ -44,7 +44,7 @@ export const characters = [
         name: "Matthew Caunter",
         image: "images/RichardMadden.png",
         peerage: "Marquess",
-        address: "Lord Marquess",
+        address: "Lord Caunter",
         age: "29",
         faceclaim: "Richard Madden",
         hasInfo: true,
@@ -121,7 +121,7 @@ export const characters = [
         age: "25",
         faceclaim: "Rufus Sewell",
         hasInfo: true,
-        playedBy: "TBD"
+        playedBy: "Zach"
     },
 
     {
@@ -195,7 +195,7 @@ export const characters = [
         age: "53",
         faceclaim: "Eoin Macke",
         hasInfo: false,
-        playedBy: "TBD"
+        playedBy: "Zach"
     },
 
     {
@@ -219,7 +219,7 @@ export const characters = [
         age: "26",
         faceclaim: "Zac Effron",
         hasInfo: true,
-        playedBy: "TBD"
+        playedBy: "Zach"
     },
 
     {
@@ -254,7 +254,7 @@ export const characters = [
         address: "Lord Huntington",
         age: 25,
         faceclaim: "Jung Kook",
-        hasInfo: true,
+        hasInfo: false,
         playedBy: "TBD"
     },
 

@@ -70,16 +70,16 @@ export const connections = [
         from: 'damian', 
         to: 'rosalind', 
         lineId: 'line9',
-        type: 'Romantic',
-        subtype: 'Childhood lovers'
+        type: 'Other',
+        subtype: 'Something'
     },
 
     { 
         from: 'rosalind', 
         to: 'damian', 
         lineId: 'line10',
-        type: 'Romantic',
-        subtype: 'Childhood lovers'
+        type: 'Other',
+        subtype: 'Something'
     },
 
     { 
