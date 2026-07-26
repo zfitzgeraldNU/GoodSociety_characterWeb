@@ -1,5 +1,16 @@
 // Define characters and their associated information
+// This is the information used to a) give character ID for later calls, b) connect other information, and c) populate the text field on the info popup.
 
+/* 
+Structure
+
+id: name of the character object used to reference it
+name: displayed name
+image: displayed image, be sure to match the image name EXACTLY (including file type extension)
+peerage, address, age, faceclaim, playedBy: self-explanatory. Populates text in the info popup box- will need to edit popup.js if changes are made to character object info
+hasInfo: flags whether to search for text document 
+
+*/
 export const characters = [
     {
         id: "elenor",
