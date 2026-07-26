@@ -1,7 +1,7 @@
 // Define connections
 export const connections = [
 
-    // Sort by character? Prioritize PCs
+
     { 
         from: 'elenor', 
         to: 'helena', 

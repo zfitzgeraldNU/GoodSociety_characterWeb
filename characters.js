@@ -8,7 +8,7 @@ id: name of the character object used to reference it
 name: displayed name
 image: displayed image, be sure to match the image name EXACTLY (including file type extension)
 peerage, address, age, faceclaim, playedBy: self-explanatory. Populates text in the info popup box- will need to edit popup.js if changes are made to character object info
-hasInfo: flags whether to search for text document 
+hasInfo: flags whether to search for text document and displays 'more info' button in info popup
 
 */
 export const characters = [
