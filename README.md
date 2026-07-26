@@ -90,6 +90,8 @@ If `hasInfo` is `true`, the “More Info” button appears. If it is `false`, th
 
 ## Notes for Contributors
 
+### Character images should be stored in folder titled 'images', character information should be stored in text documents in folder titled 'data'. Both folders should be in the same directory as the other scripts.
+
 ### IMPORTANT
 If using for Good Society, the only things that need to be edited are 'characters.js' and 'connections.js'. If you're using this for another system/purpose and want to change the information that appears in the popup box, you'll also need to edit 'popup.js'.
 
