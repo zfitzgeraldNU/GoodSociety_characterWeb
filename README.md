@@ -90,6 +90,10 @@ If `hasInfo` is `true`, the “More Info” button appears. If it is `false`, th
 
 ## Notes for Contributors
 
+### IMPORTANT
+If using for Good Society, the only things that need to be edited are 'characters.js' and 'connections.js'. If you're using this for another system/purpose and want to change the information that appears in the popup box, you'll also need to edit 'popup.js'.
+
+
 * Keep character ids consistent across all data files.
 * Use the existing data shape so the UI continues to work.
 * Keep image file names simple and predictable.
